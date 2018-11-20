@@ -35,7 +35,7 @@ http://www.the-sz.com/products/usbid/index.php?v=0x046D
 
 
 
-function Identify-USBDevice {
+function Get-HID {
     [CmdletBinding()]
     param (
         [Parameter(Mandatory=$true, Position=0, ValueFromPipeline=$true, ValueFromPipelineByPropertyName=$true)]
