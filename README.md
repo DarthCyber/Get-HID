@@ -11,6 +11,7 @@ This tool was created in an attempt and identify RF keyboards and Mice. It will 
     
 
 .EXAMPLE
+
    Get-UsbID -DeviceID USB\VID_0DC3&PID_1004\6887070814 -MasterList Download
    
    Get-UsbID -DeviceID $entUsbIDList -MasterList Local -Keywords wireless,transceiver,radio
