@@ -9,16 +9,16 @@ This tool was created in an attempt and identify RF keyboards and Mice. It will 
    This commandlet identifies enumerated devices containing a VID & PID. It is dependent upon the download of a USB device database from linux-usb.org/usb.ids.
     This DB is updated regularly. However, it is not a complete database for all known VID/PIDs. That database resides with USB.org but they want monies to access it.
     
-    While you can manually enter a device ID using VID_xxxxPID_xxxx syntax it is recommended to pipe the deviceid property or an object with the deviceid property
-    directly to the commandlet. It is also recommended that once the database has been downloaded you change the option to local.
-
-    See Notes for more info (add -full to get-help command)
 
 .EXAMPLE
    Get-UsbID -DeviceID USB\VID_0DC3&PID_1004\6887070814 -MasterList Download
+   
    Get-UsbID -DeviceID $entUsbIDList -MasterList Local -Keywords wireless,transceiver,radio
+   
    Get-UsbID -DeviceID (gwmi win32_pnpentity|select deviceid) -MasterList Local
+   
    Get-UsbID -DeviceID $entUsbIDList -MasterList Local -MasterFilePath C:\prevDB.dat
+   
    
 .INPUTS
    System.String
